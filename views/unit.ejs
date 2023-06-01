@@ -1,0 +1,111 @@
+<%- include('header') -%>
+
+<div class="container-fluid" ><!-- 内容 -->
+    <div class="row" style="margin-top:60px;">
+        <!-- 标题 -->
+        <div class="col-md-12 owndiv">
+            <h3>&ensp;[PyQt5]&ensp;&ensp;<%=ph%>.PyQt5基础知识</h3>
+        </div>
+        <!-- 标题 -->
+    </div>>
+    <div class="row" style="padding-left: 100px;">
+        <!-- 侧边导航 -->
+        <div class="col-md-1.5 left-column" style="text-align: center;height: 100%; border:2 solid red;">
+            <nav class="navbar bg-light content rounded">
+                <ul class="navbar-nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link <% if(ph==1){ %>
+                            active
+                            <% } %>" href="1">PyQt5基础知识</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(ph==2){ %>
+                            active
+                            <% } %>" href="2">搭建PyQt5开发环境</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(ph==3){ %>
+                            active
+                            <% } %>" href="3">开发第一个桌面应用</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 侧边导航 -->
+        
+        <div class="col-md-8 offset-md-1 owndiv" style="padding:20px;margin-bottom: 60px;"><!-- 主内容 -->
+            
+            <!-- 视频 -->
+            <div style="width: 100%;text-align: center;">
+                <!-- 使用EJS编写的脚本，从服务器获取到当前的页数,与原连接拼接在一起形成完整视频连接                          ↓在这里↓   --> 
+                <iframe src="https://player.bilibili.com/player.html?aid=54310770&bvid=BV154411n79k&cid=94999268&page=<%=ph%>&high_quality=1&as_wide=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="1024" height="576" >
+                </iframe>
+            </div>
+            <!-- 视频 -->
+
+                       
+            <div>
+                <hr>
+                <!-- 简介 --> 
+                <form role="form">
+                    <div class="form-group">
+                        <label for="name"><b>简介:</b></label>
+                        <p>https://study.163.com/</p>
+                        <p>pycharm+pyqt5</p>
+                        <p>视频来自网易云课堂</p>
+                        <hr>
+                    </div>
+                </form>
+                <!-- 简介 --> 
+
+                <!-- 留言框 --> 
+                <form action="./1" method="post">
+                    <div class="form-group">
+                        <label for="comment">评论:</label>
+                        <textarea type="text" class="form-control" id="comment" name="comment" placeholder="此处输入留言" style="height: 100px;"></textarea>
+                    </div>
+                    <!-- 使用EJS编写的脚本，当未登录时'发表留言'的按钮不能按,并把其中文字改为'未登录' --> 
+                    <div class="form-check">
+                        <input type="submit" class="btn btn-primary" onclick="abc()" <% if(uName==null){ %>
+                                                                                             disabled="disabled" value="未登录"
+                                                                                     <% }else{ %>
+                                                                                         value="发表留言"
+                                                                                     <% } %> >
+                    </div>
+                </form>
+                <!-- 留言框 --> 
+
+                <!-- 留言 --> 
+                <hr>
+                <!-- 使用EJS编写的脚本，从服务器获取到留言的数据(result),根据数据的个数循环添加div显示留言 --> 
+                <% for(let i = 0;i < result.length;i++){%>
+                <div class="card" style="background:rgba(255,255,255,0);">
+                    <div class="card-header" style="height: 100%;padding: 4px;font-size: 18px;color: rgb(75, 74, 74);">
+                        <i class="fa fa-anchor" style="font-size:40px;color:black;display:inline;background-color: white;border: 2px solid black;"></i>
+                        <%=result[i].uName%><!-- 用户名 --> 
+                        <div class="float-right" style="font-size: 14px;display:inline;">#<%=result[i].floor%></div><!-- 楼层 --> 
+                    </div>
+
+                    <!-- 留言时间 --> 
+                    <div class="card-body bg-secondary text-white" style="height: 100%;padding: 4px;font-size: 8px;">
+                        <%=result[i].date%>
+                    </div>
+                    <!-- 留言时间 --> 
+
+                    <!-- 留言内容 -->
+                    <div class="card-footer" style="height: 100px;padding: 4px;font-size: 16px;">
+                        <%=result[i].msg%>
+                    </div>
+                    <!-- 留言内容 -->
+
+                </div>
+                <br>
+                <% } %>
+                <hr>
+                <!-- 留言 --> 
+
+            </div>       
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

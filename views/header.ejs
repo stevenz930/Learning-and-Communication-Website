@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDY!--开始学习吧！</title>
+
+    <!-- 引用 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- 引用 -->
+    
+    <!-- CSS -->
+    <style>
+        body{
+        background-image:url('../image/bg.png');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        }
+        footer{
+            border-style:solid;
+            background:rgba(255,255,255,0.8);
+           width: 100%;
+            height: 40px;
+            padding-top: 5px;
+            border:0px solid rgba(200,200,200,0);
+        }
+        .owndiv{
+            border-radius:10px;
+            border-style:solid;
+            padding: 5px;
+            width: 300px;
+            background:rgba(255,255,255,0.8);
+        }
+        .carousel-caption{
+            background:rgba(0,0,0,0.4);
+            left: 0px;
+            width: 100%;
+            padding: 16px;
+        }
+    </style>
+
+    <script src="../js/Date.js"></script><!-- footer显示时间 -->
+    <script src="../js/iptNotNull.js"></script><!-- 输入框不为空 -->
+    <script src="../js/taNotNull.js"></script><!-- 留言回复不为空 -->
+
+    <!-- 登入成功后改变导航栏样式 -->
+    <script>
+        var rs = '<%=uName%>';
+        function checkUinfo(){
+            if(rs != ''){
+                $("#reg").html("<i style='font-size:24px;color:white;margin:8px' class='fa'>&#xf2bb</i><b class='navbar-text'>欢迎你!&ensp;"+rs+"&emsp;</b>");
+                $("#login").html("<a style='height:40px' class='nav-link btn' href='../logout'>登出</a>");
+            }	
+        }
+    </script>
+</head>
+
+<body onload="checkUinfo(), mypage()">
+    <!-- 顶部导航 -->
+    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark" style="height: 40px;">
+
+        <!-- LOGO -->
+        <a class="navbar-brand display-4" href="/" style="padding-top: 15px;">
+            <h5 class="font-weight-bold">STUDY!</h5>
+        </a>
+        <!-- LOGO -->
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <!-- 下拉列表 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">PyQt5</a>
+                    <!-- 下拉列表内容 -->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../pyqt5/1">PyQt5基础知识</a>
+                        <a class="dropdown-item" href="../pyqt5/2">搭建PyQt5开发环境</a>
+                        <a class="dropdown-item" href="../pyqt5/3">开发第一个桌面应用</a>
+                    </div>
+                    <!-- 下拉列表内容 -->
+                </li>
+                <!-- 下拉列表 -->
+
+                <!-- 占位用,无实际内容 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">C#</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">占位1</a>
+                        <a class="dropdown-item" href="#">占位2</a>
+                        <a class="dropdown-item" href="#">占位3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Bootstrap</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">占位1</a>
+                        <a class="dropdown-item" href="#">占位2</a>
+                        <a class="dropdown-item" href="#">占位3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Nods.js</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">占位1</a>
+                        <a class="dropdown-item" href="#">占位2</a>
+                        <a class="dropdown-item" href="#">占位3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">EJS</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">占位1</a>
+                        <a class="dropdown-item" href="#">占位2</a>
+                        <a class="dropdown-item" href="#">占位3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">MySQL</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">占位1</a>
+                        <a class="dropdown-item" href="#">占位2</a>
+                        <a class="dropdown-item" href="#">占位3</a>
+                    </div>
+                </li>
+                <!-- 占位用,无实际内容 -->
+                
+            </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav navbar-right" id="Uinfo">
+                <li class="nav-item" id="reg">
+                    <a class="nav-link" href="../register">注册</a>
+                </li>
+                <li class="nav-item" id="login">
+                    <a class="nav-link" href="../login">登录</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>

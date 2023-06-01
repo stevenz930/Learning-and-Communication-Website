@@ -1,0 +1,138 @@
+
+    <%- include('header') -%>
+    <div class="container"><!-- 主内容 -->
+
+        <div class="row" style="border-radius:10px; margin-top:60px; margin-bottom: 20px;"><!-- 轮播 -->
+            <div class="col-md-12" style=" border-radius:10px ">
+                <div id="demo" class="carousel slide col-md-12" data-ride="carousel">
+
+                    <!-- 指示符 -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- 轮播图片 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="../pyqt5/1">
+                                <img src="image/sky.png">
+                                <div class="carousel-caption">
+                                    <h3>PyQt5</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="image/stars.png">
+                                <div class="carousel-caption">
+                                    <h3>C#</h3>
+                                </div>
+                             </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="image/circle.png">
+                                <div class="carousel-caption">
+                                    <h3>Bootstrap</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 左右切换按钮 -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 20px;height: 180px;"><!-- 欢迎语句 -->
+            <div class="col-md-12 owndiv" style="padding-left: 20px;">
+                <h1>Hello, world!</h1>
+                <p>欢迎来到 STUDY! 平台</p>
+                <!-- 按钮：用于打开模态框 -->
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                    关于STUDY!
+                </button>
+                <!-- 模态框 -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- 模态框头部 -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">关于STUDY!</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- 模态框主体 -->
+                            <div class="modal-body">
+                                HELLO!</br>STUDY!平台是一个学习平台。
+                            </div>
+                            <!-- 模态框底部 -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 20px;"><!-- 章节简介1 -->
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>PyQt5</h2>
+                <hr>
+                <p> PyQt5是一套Python绑定Digia QT5应用的框架。它可用于Python 2和3。PyQt5做为Python的一个模块，它有620多个类和6000个函数和方法。这是一个跨平台的工具包，它可以运行在所有主要的操作系统，包括UNIX，Windows，Mac OS。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="pyqt5">开始学习 »</a>
+            </div>
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>C#</h2>
+                <hr>
+                <p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="#">开始学习 »</a>
+            </div>
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>Bootstrap</h2>
+                <hr>
+                <p> Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="#">开始学习 »</a>
+            </div>
+        </div>
+
+        <!-- 占位用,无实际内容 -->
+        <div class="row" style="margin-bottom: 60px;"><!-- 章节简介2 -->
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>Nods.js</h2>
+                <hr>
+                <p> PyQt5是一套Python绑定Digia QT5应用的框架。它可用于Python 2和3。PyQt5做为Python的一个模块，它有620多个类和6000个函数和方法。这是一个跨平台的工具包，它可以运行在所有主要的操作系统，包括UNIX，Windows，Mac OS。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="#">开始学习 »</a>
+            </div>
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>EJS</h2>
+                <hr>
+                <p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。EJS 没有如何组织内容的教条；也没有再造一套迭代和控制流语法；有的只是普通的 JavaScript 代码而已。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="#">开始学习 »</a>
+            </div>
+            <div class="col-md-4 column owndiv" style="height:260px;">
+                <h2>MySQL</h2>
+                <hr>
+                <p>MySQL 是最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 是最好的 RDBMS(Relational Database Management System：关系数据库管理系统)应用软件之一。
+                </p>
+                <a style="position:absolute; bottom:10px;" class="btn" href="#">开始学习 »</a>
+            </div>
+        </div>
+        <!-- 占位用,无实际内容 -->
+
+    </div>
+    <%- include('footer') -%>
